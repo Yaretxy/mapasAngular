@@ -3,9 +3,9 @@ import { MapMarker } from '@angular/google-maps';
 
 import { TaqueriasService } from './taquerias.service';
 import { Taquerias } from './taquerias';
-import { connect } from 'http2';
+//import { connect } from 'http2';
 import { Observable } from 'rxjs';
-import { disconnect } from 'process';
+//import { disconnect } from 'process';
 
 @Component({
   selector: 'app-root',
@@ -82,6 +82,7 @@ getTaquerias():void{
    
     } 
 }
+/*
 export class  TaqueriasDataSource extends DataSource<any>{
   displayedColumns:string []=['nombre','calidad','precio'];
   dataSource=taquerias;
@@ -90,4 +91,4 @@ export class  TaqueriasDataSource extends DataSource<any>{
   };
   disconnect(){}
 }
-
+*/
