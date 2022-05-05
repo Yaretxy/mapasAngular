@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ 
+</head>
+<body>
+  <mat-table [dataSource]="taquerias">
+    
+  </mat-table>
+<div *ngFor="let taque of taqueria">
+  <span class="badge">{{taque.nombre}}</span>
+  <span class="badge">{{taque.precio}}</span>
+  <span class="badge">{{taque.comentario}}</span>
+</div>
+
+  <google-map
+  (mapClick)="click($event)"
+  height="500px"
+  width="100%"
+  [zoom]="zoom"
+  [center]="center"
+  [options]="options">
+  
+  <map-marker
+  *ngFor="let marker of markers"
+  [position]="marker.position"
+  [label]="marker.label"
+  [title]="marker.title"
+  [options]="marker.option"
+  >
+
+  </map-marker>
+  </google-map>
+  <button (click)="zoomIn()">zoom in</button>
+  <button (click)="zoomOut()">zoom Out</button>
+  <button (click)="addMarker()">Zoom out</button>
+  
+</body>
+</html>
